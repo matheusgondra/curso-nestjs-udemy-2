@@ -1,0 +1,23 @@
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+	"name": "Matheus",
+	"email": "matheus@email.com",
+	"password": "senha1234"
+}
+
+###
+
+POST http://localhost:3000/users/signin
+Content-Type: application/json
+
+{
+	"email": "matheus@email.com",
+	"password": "senha1234"
+}
+
+###
+
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdkNDRkZTg1MDVmODJhYTVmOGVlMDEiLCJpYXQiOjE3MTk0ODU4OTksImV4cCI6MTcxOTU3MjI5OX0.R-6nsqPmMdsuEcl7rrp_jle920dO1Da9ToCwQqZ-nAQ

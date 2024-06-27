@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable, UnauthorizedException } from "@nestjs/common";
+import {
+	BadRequestException,
+	Injectable,
+	UnauthorizedException
+} from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { User } from "src/users/models/user.model";
@@ -8,7 +12,7 @@ import { JwtPayload } from "./models/jwt-payload.model";
 
 @Injectable()
 export class AuthService {
-	constructor(@InjectModel("User") private readonly userModel: Model<User>) { }
+	constructor(@InjectModel("User") private readonly userModel: Model<User>) {}
 
 	public async createAccessToken(userId: string): Promise<string> {
 		return sign({ userId }, process.env.JWT_SECRET, {
